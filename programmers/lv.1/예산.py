@@ -17,3 +17,14 @@ def solution(d, budget):
     return count
 
 print(solution(d, budget))
+
+
+# 2
+d.sort()
+def solution(d, budget):
+    d.sort()
+    
+    while budget < sum(d):
+        d.pop()
+    
+    return len(d)
