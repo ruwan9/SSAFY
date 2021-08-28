@@ -23,7 +23,7 @@ for student in students:
         onoff = onoff[1:]
         print(onoff)
         i = 0
-        while onoff[switch-1-i] == onoff[switch-1+i] and 0<=switch-1-i and switch_num >= switch-1+i:
+        while onoff[(switch-1)-i] == onoff[(switch-1)+i] and 0<= switch-1-i < switch_num:
             if  onoff[switch-1-i] == 0:
                 onoff[switch-1-i] = 1
                 onoff[switch-1+i] = 1
@@ -32,4 +32,5 @@ for student in students:
                 onoff[switch-1-i] = 0
                 onoff[switch-1+i] = 0
                 i += 1
+
 print(*onoff)
