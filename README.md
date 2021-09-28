@@ -8,7 +8,5 @@
 
 
 
-목표 : 1 Day 1 Commit
-
 From 20210817~
 
