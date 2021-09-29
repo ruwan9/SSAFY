@@ -1,6 +1,7 @@
 import sys
 sys.stdin = open('input1.txt')
 
+#################### 방법 1 ####################
 N = int(input())
 plans = input().split()
 print(plans)
@@ -35,3 +36,35 @@ print(x, y)
 
 공간을 넘어가는 경우 무시하는 것도 잊지 말기 
 """
+
+#################### 방법 2 ####################
+# N = int(input())
+# plans = input().split()
+# print(plans)
+
+# # 상하좌우
+# dr = [-1, 1, 0, 0]
+# dc = [0, 0, -1, 1]
+
+# # 움직이는 방향
+# moves = ['U', 'D', 'L', 'R']
+
+# # 시작점
+# x, y = 1, 1
+
+
+# for plan in plans:
+#     for i in range(len(moves)):
+#         if plan == moves[i]:
+#             nx = x + dr[i]
+#             ny = y + dc[i]
+
+#     if nx < 1 or ny < 1 or nx > N or ny > N:
+#         continue
+
+#     x = nx
+#     y = ny
+
+# print(x, y)
+
+
