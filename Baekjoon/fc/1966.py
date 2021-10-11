@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open('1966_input.txt')
+sys.stdin = open('input_files/1966.txt')
 
 #################### 방법 1 ####################
 # T = int(input())
