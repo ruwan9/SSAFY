@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open('2798_input.txt')
+sys.stdin = open('input_files/2798.txt')
 
 #################### 방법 1 ####################
 # N, M = map(int, input().split())
