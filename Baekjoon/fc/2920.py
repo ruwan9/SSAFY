@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open('2920_input.txt')
+sys.stdin = open('input_files/2920.txt')
 
 #################### 방법 1 ####################
 # def discrimination(numbers):
