@@ -24,7 +24,7 @@ graph = [
 # 각 노드가 방문된 정보를 리스트 자료형으로 표현
 visited = [False] * 9
 
-# DFS 호철
+# DFS 호출
 dfs(graph, 1, visited)
 
 """

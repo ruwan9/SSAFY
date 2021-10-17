@@ -1,11 +1,17 @@
-# numbers = [6, 10, 2]
-numbers = [3, 30, 34, 5, 9]	
+from itertools import permutations
 
-#  2. 
+numbers = [3, 30, 34, 5, 9]
+
+# 시간초과
 num = list(map(str, numbers))
-num.sort(key = lambda x : x*3, reverse = True)  # 1000 이하이므로 3자리 수로 맞춘 뒤 비교
-print(str(int(''.join(num))))
+perms = sorted(list(permutations(num)))
+print(perms)
 
-"""
-문자열 비교 시 1000 이하이므로 3자리수로 맞춘 뒤 비교
-"""
+list(perms[-1]).sort()
+print(''.join(perms[-1]))
+
+
+# # 위에꺼는 시간초과나서 permutation 쓰지 않고
+# num = list(map(str, numbers))
+# num = sorted(num, key=lambda x: x*3, reverse=True)  # 1000 이하의 원소니까 *3만 해주면 됨
+# print(''.join(num))

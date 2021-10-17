@@ -5,47 +5,47 @@ k = 5
 # 테스트 케이스에서 실패가 몇개 나온다... 0일때 다음거로 넘어가는 부분을 더 생각해봐야할 듯
 
 
-def test(food_times, time):
-	global tmp
-	tmp = (time % len(food_times))
-	if food_times[tmp] != 0:
-		food_times[tmp] -= 1
-		time += 1
-		return tmp
-	if food_times[tmp] == 0:
-		test(food_times, time+1)
-
-time = 0
-while time <= k:
-	tmp = time % len(food_times)
-
-	if food_times[tmp] == 0:
-		tmp = test(food_times, time)
-		time += 1
-	else:
-		food_times[tmp] -= 1
-		time += 1
-
-	print(time, tmp, food_times)
+# def test(food_times, time):
+# 	global tmp
+# 	tmp = (time % len(food_times))
+# 	if food_times[tmp] != 0:
+# 		food_times[tmp] -= 1
+# 		time += 1
+# 		return tmp
+# 	if food_times[tmp] == 0:
+# 		test(food_times, time+1)
 
 # time = 0
 # while time <= k:
 # 	tmp = time % len(food_times)
 
 # 	if food_times[tmp] == 0:
-# 		tmp = (tmp+1)%len(food_times)
-# 		food_times[tmp] -= 1
+# 		tmp = test(food_times, time)
 # 		time += 1
 # 	else:
-# 		food_times[tmp] -= 1 
+# 		food_times[tmp] -= 1
 # 		time += 1
 
 # 	print(time, tmp, food_times)
 
-# foods = [i+1 for i in range(len(food_times))]
+time = 0
+while time <= k:
+	tmp = time % len(food_times)
+
+	if food_times[tmp] == 0:
+		tmp = (tmp+1)%len(food_times)
+		food_times[tmp] -= 1
+		time += 1
+	else:
+		food_times[tmp] -= 1 
+		time += 1
+
+	print(time, tmp, food_times)
+
+foods = [i+1 for i in range(len(food_times))]
 
 
-# print(foods[tmp])
+print(foods[tmp])
 
 
 #################### 방법 2 ####################
