@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open('input3.txt')
+sys.stdin = open('input3-3.txt')
 
 # 1. min값을 모은 list 활용
 N, M = map(int, input().split())
