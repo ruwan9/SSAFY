@@ -1,3 +1,35 @@
+#################### 방법 1. ####################
+import sys
+sys.stdin = open('input.txt')
+
+
+def check(data):
+    stack = []  # 괄호 담을 스택
+
+    for char in data:
+        if char == '(' or char == '{':
+            stack.append(char)
+        elif char == ')':
+            if stack and stack[-1] == '(':
+                stack.pop()
+            else:
+                return 0
+        elif char == '}':
+            if stack and stack[-1] == '{':
+                stack.pop()
+            else:
+                return 0
+
+    return 1 if not stack else 0
+
+
+T = int(input())
+for tc in range(1, T+1):
+    print(f"#{tc}", check(input()))
+
+
+
+#################### 방법 2. ####################
 import sys
 sys.stdin = open('input.txt')
 
